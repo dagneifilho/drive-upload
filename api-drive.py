@@ -3,13 +3,15 @@ from pydrive.drive import GoogleDrive
 import os
 import sys
 
+# Habilitar a API do Google Drive em: https://console.developers.google.com/apis/library
+
 
 gauth=GoogleAuth()
 gauth.LocalWebserverAuth()
 
 from pydrive.drive import GoogleDrive
 
-arquivo_path=str(sys.argv[1])
+arquivo_path=str(sys.argv[1]) #Passar o caminho do arquivo como argumento no terminal
 
 arquivo =open(arquivo_path,encoding='utf-8')
 arq_inv=arquivo_path[::-1]
